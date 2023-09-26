@@ -1,6 +1,6 @@
-part of material;
+part of mewnu;
 
-class MaterialPaiting {
+class MewnuPaitings {
   BoxDecoration boxDecoration({
     Color? color,
   }) {

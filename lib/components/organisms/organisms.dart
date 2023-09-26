@@ -1,15 +1,15 @@
-part of material;
+part of mewnu;
 
-class MaterialOrganisms {
-  MaterialOrganisms();
+class MewnuOrganisms {
+  MewnuOrganisms();
 
-  AppBar appBar({
+  material.AppBar appBar({
     Color? backgroundColor,
     Widget? leading,
     Widget? title,
     List<Widget>? actions,
   }) {
-    return AppBar(
+    return material.AppBar(
       backgroundColor: backgroundColor,
       leading: leading,
       title: title,

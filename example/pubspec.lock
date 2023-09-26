@@ -9,14 +9,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
-  auto_injector:
-    dependency: transitive
-    description:
-      name: auto_injector
-      sha256: "2952a4d4339ed3b65e8e54765ec68ee6ada5cb21d83cb8d39e3f6b4e690ab5ca"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -49,14 +41,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.2"
-  crypto:
-    dependency: transitive
-    description:
-      name: crypto
-      sha256: ff625774173754681d66daaf4a448684fb04b78f902da9cb3d308c19cc5e8bab
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.3"
   fake_async:
     dependency: transitive
     description:
@@ -78,19 +62,27 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  flutter_modular:
-    dependency: "direct main"
+  flutter_svg:
+    dependency: transitive
     description:
-      name: flutter_modular
-      sha256: ac6298ce1abd414286ee5a554fc45e81e358461979b5d4e02c8abd685e3b23f2
+      name: flutter_svg
+      sha256: "6ff9fa12892ae074092de2fa6a9938fb21dbabfdaa2ff57dc697ff912fc8d4b2"
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.2"
+    version: "1.1.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  gap:
+    dependency: transitive
+    description:
+      name: gap
+      sha256: f19387d4e32f849394758b91377f9153a1b41d79513ef7668c088c77dbc6955d
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   lints:
     dependency: transitive
     description:
@@ -130,14 +122,6 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  modular_core:
-    dependency: transitive
-    description:
-      name: modular_core
-      sha256: "5baaa460ac9d85d457d6864ef41a2194b8115a6bdeb585a684789f2d9004c892"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.3.2"
   path:
     dependency: transitive
     description:
@@ -146,14 +130,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
-  result_dart:
+  path_drawing:
     dependency: transitive
     description:
-      name: result_dart
-      sha256: f28a171d55e2e1c1753b41d4d8edcaff886f103e73c575d14764913907e57928
+      name: path_drawing
+      sha256: bbb1934c0cbb03091af082a6389ca2080345291ef07a5fa6d6e078ba8682f977
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.0.1"
+  path_parsing:
+    dependency: transitive
+    description:
+      name: path_parsing
+      sha256: e3e67b1629e6f7e8100b367d3db6ba6af4b1f0bb80f64db18ef1fbabd2fa9ccf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: cb3798bef7fc021ac45b308f4b51208a152792445cce0448c9a4ba5879dd8750
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.4.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -207,22 +207,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
-  typed_data:
-    dependency: transitive
-    description:
-      name: typed_data
-      sha256: facc8d6582f16042dd49f2463ff1bd6e2c9ef9f3d5da3d9b087e244a7b564b3c
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.3.2"
-  uuid:
-    dependency: transitive
-    description:
-      name: uuid
-      sha256: "648e103079f7c64a36dc7d39369cabb358d377078a051d6ae2ad3aa539519313"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.7"
   vector_math:
     dependency: transitive
     description:
@@ -239,6 +223,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.4-beta"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "5bc72e1e45e941d825fd7468b9b4cc3b9327942649aeb6fc5cdbf135f0a86e84"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.0"
 sdks:
   dart: ">=3.1.0 <4.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=3.7.0"

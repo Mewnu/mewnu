@@ -1,13 +1,13 @@
-part of material;
+part of mewnu;
 
-class MaterialMolecules {
-  MaterialMolecules();
+class MewnuMolecules {
+  MewnuMolecules();
 
-  ElevatedButton elevatedButton({
+  material.ElevatedButton elevatedButton({
     required void Function()? onPressed,
     required Widget? child,
   }) {
-    return ElevatedButton(
+    return material.ElevatedButton(
       onPressed: onPressed,
       child: child,
     );
