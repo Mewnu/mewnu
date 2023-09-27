@@ -1,44 +1,44 @@
 part of mewnu;
 
-class MewnuIconsData {
+class IconsData {
   final String fontFamily;
   final String? fontPackage;
-  final MewnuIconCharactersData characters;
-  final MewnuIconSizesData sizes;
+  final IconCharactersData characters;
+  final IconSizesData sizes;
 
-  const MewnuIconsData({
+  const IconsData({
     required this.fontFamily,
     required this.fontPackage,
     required this.characters,
     required this.sizes,
   });
 
-  factory MewnuIconsData.standard() => MewnuIconsData(
+  factory IconsData.standard() => IconsData(
         fontFamily: 'darwin_icons',
         fontPackage: 'darwinseguros_app',
-        characters: MewnuIconCharactersData.standard(),
-        sizes: MewnuIconSizesData.standard(),
+        characters: IconCharactersData.standard(),
+        sizes: IconSizesData.standard(),
       );
 }
 
-class MewnuIconCharactersData {
-  const MewnuIconCharactersData();
+class IconCharactersData {
+  const IconCharactersData();
 
-  factory MewnuIconCharactersData.standard() => const MewnuIconCharactersData();
+  factory IconCharactersData.standard() => const IconCharactersData();
 }
 
-class MewnuIconSizesData {
+class IconSizesData {
   final double small;
   final double medium;
   final double large;
 
-  const MewnuIconSizesData({
+  const IconSizesData({
     required this.small,
     required this.medium,
     required this.large,
   });
 
-  factory MewnuIconSizesData.standard() => const MewnuIconSizesData(
+  factory IconSizesData.standard() => const IconSizesData(
         small: 16.0,
         medium: 24.0,
         large: 32.0,

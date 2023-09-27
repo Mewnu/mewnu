@@ -1,8 +1,8 @@
 part of mewnu;
 
-class MewnuDecorations {
-  MewnuDecorations();
-  
+class Decorations {
+  Decorations();
+
   material.BoxDecoration boxDecoration({
     Color? color,
   }) {

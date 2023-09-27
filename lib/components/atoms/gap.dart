@@ -1,34 +1,34 @@
 part of mewnu;
 
-class MewnuGaps {
-  MewnuGaps();
+class Gaps {
+  Gaps();
 
-  MewnuGap none() {
-    return const MewnuGap.none();
+  Gap none() {
+    return const Gap.none();
   }
 
-  MewnuGap extraSmall() {
-    return const MewnuGap.extraSmall();
+  Gap extraSmall() {
+    return const Gap.extraSmall();
   }
 
-  MewnuGap small() {
-    return const MewnuGap.small();
+  Gap small() {
+    return const Gap.small();
   }
 
-  MewnuGap medium() {
-    return const MewnuGap.medium();
+  Gap medium() {
+    return const Gap.medium();
   }
 
-  MewnuGap large() {
-    return const MewnuGap.large();
+  Gap large() {
+    return const Gap.large();
   }
 
-  MewnuGap extraLarge() {
-    return const MewnuGap.extraLarge();
+  Gap extraLarge() {
+    return const Gap.extraLarge();
   }
 }
 
-enum MewnuGapSize {
+enum GapSize {
   none,
   extraSmall,
   small,
@@ -37,68 +37,68 @@ enum MewnuGapSize {
   extraLarge,
 }
 
-extension MewnuGapSizeExtension on MewnuGapSize {
-  double size(MewnuThemeData theme) {
+extension GapSizeExtension on GapSize {
+  double size(ThemeData theme) {
     switch (this) {
-      case MewnuGapSize.none:
+      case GapSize.none:
         return 0;
-      case MewnuGapSize.extraSmall:
+      case GapSize.extraSmall:
         return theme.spacings.extraSmall;
-      case MewnuGapSize.small:
+      case GapSize.small:
         return theme.spacings.small;
-      case MewnuGapSize.medium:
+      case GapSize.medium:
         return theme.spacings.medium;
-      case MewnuGapSize.large:
+      case GapSize.large:
         return theme.spacings.large;
-      case MewnuGapSize.extraLarge:
+      case GapSize.extraLarge:
         return theme.spacings.extraLarge;
     }
   }
 }
 
-class MewnuGap extends StatelessWidget {
-  final MewnuGapSize gapSize;
+class Gap extends StatelessWidget {
+  final GapSize gapSize;
   final Color? color;
 
-  const MewnuGap.custom({
+  const Gap.custom({
     super.key,
     this.color,
-    this.gapSize = MewnuGapSize.none,
+    this.gapSize = GapSize.none,
   });
 
-  const MewnuGap.none({
+  const Gap.none({
     super.key,
     this.color,
-  }) : gapSize = MewnuGapSize.none;
+  }) : gapSize = GapSize.none;
 
-  const MewnuGap.extraSmall({
+  const Gap.extraSmall({
     super.key,
     this.color,
-  }) : gapSize = MewnuGapSize.extraSmall;
+  }) : gapSize = GapSize.extraSmall;
 
-  const MewnuGap.small({
+  const Gap.small({
     super.key,
     this.color,
-  }) : gapSize = MewnuGapSize.small;
+  }) : gapSize = GapSize.small;
 
-  const MewnuGap.medium({
+  const Gap.medium({
     super.key,
     this.color,
-  }) : gapSize = MewnuGapSize.medium;
+  }) : gapSize = GapSize.medium;
 
-  const MewnuGap.large({
+  const Gap.large({
     super.key,
     this.color,
-  }) : gapSize = MewnuGapSize.large;
+  }) : gapSize = GapSize.large;
 
-  const MewnuGap.extraLarge({
+  const Gap.extraLarge({
     super.key,
     this.color,
-  }) : gapSize = MewnuGapSize.extraLarge;
+  }) : gapSize = GapSize.extraLarge;
 
   @override
   Widget build(BuildContext context) {
-    return Gap(
+    return gap.Gap(
       gapSize.size(context.theme),
       color: color,
     );

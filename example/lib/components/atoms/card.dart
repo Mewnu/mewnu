@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as material;
+import 'package:flutter/widgets.dart';
 import 'package:mewnu/mewnu.dart';
 
-extension CardExtension on Card {
-  Card elevated({
+extension CardExtension on material.Card {
+  material.Card elevated({
     double? elevation,
   }) {
     return copyWith(
@@ -10,7 +11,7 @@ extension CardExtension on Card {
     );
   }
 
-  Card outlined({
+  material.Card outlined({
     ShapeBorder? shape,
   }) {
     return copyWith(
@@ -18,7 +19,7 @@ extension CardExtension on Card {
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(40),
             side: BorderSide(
-              color: Colors.grey.withOpacity(0.2),
+              color: material.Colors.grey.withOpacity(0.2),
               width: 1,
             ),
           ),

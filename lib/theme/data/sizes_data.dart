@@ -1,13 +1,13 @@
 part of mewnu;
 
-class MewnuSizesData {
+class SizesData {
   final double dot;
 
-  const MewnuSizesData({
+  const SizesData({
     required this.dot,
   });
 
-  factory MewnuSizesData.standard() => const MewnuSizesData(
+  factory SizesData.standard() => const SizesData(
         dot: 8.0,
       );
 }

@@ -1,6 +1,6 @@
 part of mewnu;
 
-class MewnuColors {
+class Colors {
   static const blackChocolate = Color(0x1919190A);
   static const brightGray = Color(0xFFEAEAEA);
   static const cultured = Color(0xFFF4F4F4);
@@ -35,19 +35,19 @@ class MewnuColors {
   });
 }
 
-class MewnuColorsData {
+class ColorsData {
   final material.MaterialColor? primarySwatch;
-  MewnuColorsData({
+  ColorsData({
     this.primarySwatch,
   });
 
-  factory MewnuColorsData.standard() => MewnuColorsData(
-        primarySwatch: MewnuColors.blue,
+  factory ColorsData.standard() => ColorsData(
+        primarySwatch: Colors.blue,
       );
 }
 
-class MewnuColorSchemeData extends material.ColorScheme {
-  const MewnuColorSchemeData({
+class ColorSchemeData extends material.ColorScheme {
+  const ColorSchemeData({
     required super.brightness,
     required super.primary,
     required super.onPrimary,

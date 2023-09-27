@@ -1,7 +1,7 @@
 part of mewnu;
 
-class MewnuListViews {
-  MewnuListViews();
+class ListViews {
+  ListViews();
 
   ListView static({
     required List<Widget> children,

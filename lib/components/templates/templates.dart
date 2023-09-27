@@ -1,7 +1,7 @@
 part of mewnu;
 
-class MewnuTemplates {
-  MewnuTemplates();
+class Templates {
+  Templates();
 
   material.Scaffold scaffold({
     PreferredSizeWidget? appBar,

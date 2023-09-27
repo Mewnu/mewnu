@@ -1,161 +1,161 @@
 part of mewnu;
 
-class MewnuTexts {
-  MewnuTexts();
+class Texts {
+  Texts();
 
-  MewnuText standard(String data) {
-    return MewnuText.standard(data);
+  Text standard(String data) {
+    return Text.standard(data);
   }
 
-  MewnuText displayLarge(String data) {
-    return MewnuText.displayLarge(data);
+  Text displayLarge(String data) {
+    return Text.displayLarge(data);
   }
 
-  MewnuText displayMedium(String data) {
-    return MewnuText.displayMedium(data);
+  Text displayMedium(String data) {
+    return Text.displayMedium(data);
   }
 
-  MewnuText displaySmall(String data) {
-    return MewnuText.displaySmall(data);
+  Text displaySmall(String data) {
+    return Text.displaySmall(data);
   }
 
-  MewnuText headlineLarge(String data) {
-    return MewnuText.headlineLarge(data);
+  Text headlineLarge(String data) {
+    return Text.headlineLarge(data);
   }
 
-  MewnuText headlineMedium(String data) {
-    return MewnuText.headlineMedium(data);
+  Text headlineMedium(String data) {
+    return Text.headlineMedium(data);
   }
 
-  MewnuText headlineSmall(String data) {
-    return MewnuText.headlineSmall(data);
+  Text headlineSmall(String data) {
+    return Text.headlineSmall(data);
   }
 
-  MewnuText titleSmall(String data) {
-    return MewnuText.titleSmall(data);
+  Text titleSmall(String data) {
+    return Text.titleSmall(data);
   }
 
-  MewnuText bodyLarge(String data) {
-    return MewnuText.bodyLarge(data);
+  Text bodyLarge(String data) {
+    return Text.bodyLarge(data);
   }
 
-  MewnuText bodySmall(String data) {
-    return MewnuText.bodySmall(data);
+  Text bodySmall(String data) {
+    return Text.bodySmall(data);
   }
 
-  MewnuText labelLarge(String data) {
-    return MewnuText.labelLarge(data);
+  Text labelLarge(String data) {
+    return Text.labelLarge(data);
   }
 
-  MewnuText labelMedium(String data) {
-    return MewnuText.labelMedium(data);
+  Text labelMedium(String data) {
+    return Text.labelMedium(data);
   }
 
-  MewnuText labelSmall(String data) {
-    return MewnuText.labelSmall(data);
+  Text labelSmall(String data) {
+    return Text.labelSmall(data);
   }
 }
 
-class MewnuText extends material.StatelessWidget {
+class Text extends material.StatelessWidget {
   final String data;
-  final MewnuTextTypographyType? typographyType;
+  final TextTypographyType? typographyType;
 
-  const MewnuText(
+  const Text(
     this.data, {
     super.key,
     this.typographyType,
   });
 
-  const MewnuText.standard(
+  const Text.standard(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.displayLarge;
+  }) : typographyType = TextTypographyType.displayLarge;
 
-  const MewnuText.displayLarge(
+  const Text.displayLarge(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.displayLarge;
+  }) : typographyType = TextTypographyType.displayLarge;
 
-  const MewnuText.displayMedium(
+  const Text.displayMedium(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.displayMedium;
+  }) : typographyType = TextTypographyType.displayMedium;
 
-  const MewnuText.displaySmall(
+  const Text.displaySmall(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.displaySmall;
+  }) : typographyType = TextTypographyType.displaySmall;
 
-  const MewnuText.headlineLarge(
+  const Text.headlineLarge(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.headlineLarge;
+  }) : typographyType = TextTypographyType.headlineLarge;
 
-  const MewnuText.headlineMedium(
+  const Text.headlineMedium(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.headlineMedium;
+  }) : typographyType = TextTypographyType.headlineMedium;
 
-  const MewnuText.headlineSmall(
+  const Text.headlineSmall(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.headlineSmall;
+  }) : typographyType = TextTypographyType.headlineSmall;
 
-  const MewnuText.titleLarge(
+  const Text.titleLarge(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.titleLarge;
+  }) : typographyType = TextTypographyType.titleLarge;
 
-  const MewnuText.titleMedium(
+  const Text.titleMedium(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.titleMedium;
+  }) : typographyType = TextTypographyType.titleMedium;
 
-  const MewnuText.titleSmall(
+  const Text.titleSmall(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.titleSmall;
+  }) : typographyType = TextTypographyType.titleSmall;
 
-  const MewnuText.bodyLarge(
+  const Text.bodyLarge(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.bodyLarge;
+  }) : typographyType = TextTypographyType.bodyLarge;
 
-  const MewnuText.bodyMedium(
+  const Text.bodyMedium(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.bodyMedium;
+  }) : typographyType = TextTypographyType.bodyMedium;
 
-  const MewnuText.bodySmall(
+  const Text.bodySmall(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.bodySmall;
+  }) : typographyType = TextTypographyType.bodySmall;
 
-  const MewnuText.labelLarge(
+  const Text.labelLarge(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.labelLarge;
+  }) : typographyType = TextTypographyType.labelLarge;
 
-  const MewnuText.labelMedium(
+  const Text.labelMedium(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.labelMedium;
+  }) : typographyType = TextTypographyType.labelMedium;
 
-  const MewnuText.labelSmall(
+  const Text.labelSmall(
     this.data, {
     super.key,
-  }) : typographyType = MewnuTextTypographyType.labelSmall;
+  }) : typographyType = TextTypographyType.labelSmall;
 
   @override
   material.Widget build(material.BuildContext context) {
-    return Text(
+    return material.Text(
       data,
       style: typographyType?.textStyle(context.theme),
     );
   }
 }
 
-enum MewnuTextTypographyType {
+enum TextTypographyType {
   standard,
   displayLarge,
   displayMedium,
@@ -174,40 +174,40 @@ enum MewnuTextTypographyType {
   labelSmall,
 }
 
-extension MewnuTextTypographyTypeExtension on MewnuTextTypographyType {
-  TextStyle? textStyle(MewnuThemeData theme) {
+extension TextTypographyTypeExtension on TextTypographyType {
+  TextStyle? textStyle(ThemeData theme) {
     switch (this) {
-      case MewnuTextTypographyType.standard:
+      case TextTypographyType.standard:
         return null;
-      case MewnuTextTypographyType.displayLarge:
+      case TextTypographyType.displayLarge:
         return theme.typographies?.displayLarge;
-      case MewnuTextTypographyType.displayMedium:
+      case TextTypographyType.displayMedium:
         return theme.typographies?.displayMedium;
-      case MewnuTextTypographyType.displaySmall:
+      case TextTypographyType.displaySmall:
         return theme.typographies?.displaySmall;
-      case MewnuTextTypographyType.headlineLarge:
+      case TextTypographyType.headlineLarge:
         return theme.typographies?.headlineLarge;
-      case MewnuTextTypographyType.headlineMedium:
+      case TextTypographyType.headlineMedium:
         return theme.typographies?.headlineMedium;
-      case MewnuTextTypographyType.headlineSmall:
+      case TextTypographyType.headlineSmall:
         return theme.typographies?.headlineSmall;
-      case MewnuTextTypographyType.titleLarge:
+      case TextTypographyType.titleLarge:
         return theme.typographies?.titleLarge;
-      case MewnuTextTypographyType.titleMedium:
+      case TextTypographyType.titleMedium:
         return theme.typographies?.titleMedium;
-      case MewnuTextTypographyType.titleSmall:
+      case TextTypographyType.titleSmall:
         return theme.typographies?.titleSmall;
-      case MewnuTextTypographyType.bodyLarge:
+      case TextTypographyType.bodyLarge:
         return theme.typographies?.bodyLarge;
-      case MewnuTextTypographyType.bodyMedium:
+      case TextTypographyType.bodyMedium:
         return theme.typographies?.bodyMedium;
-      case MewnuTextTypographyType.bodySmall:
+      case TextTypographyType.bodySmall:
         return theme.typographies?.bodySmall;
-      case MewnuTextTypographyType.labelLarge:
+      case TextTypographyType.labelLarge:
         return theme.typographies?.labelLarge;
-      case MewnuTextTypographyType.labelMedium:
+      case TextTypographyType.labelMedium:
         return theme.typographies?.labelMedium;
-      case MewnuTextTypographyType.labelSmall:
+      case TextTypographyType.labelSmall:
         return theme.typographies?.labelSmall;
     }
   }

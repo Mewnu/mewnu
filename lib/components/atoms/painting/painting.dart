@@ -1,10 +1,10 @@
 part of mewnu;
 
-class MewnuPaintings {
-  final MewnuPaddings padding;
-  final MewnuDecorations decoration;
+class Paintings {
+  final Paddings padding;
+  final Decorations decoration;
 
-  MewnuPaintings()
-      : padding = MewnuPaddings(),
-        decoration = MewnuDecorations();
+  Paintings()
+      : padding = Paddings(),
+        decoration = Decorations();
 }

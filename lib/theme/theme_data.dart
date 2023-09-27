@@ -1,20 +1,20 @@
 part of mewnu;
 
-class MewnuThemeData {
+class ThemeData {
   final material.Brightness brightness;
   final bool? useMaterial3;
-  final MewnuIconsData icons;
-  final MewnuColorsData? colors;
-  final MewnuColorSchemeData? colorScheme;
-  final MewnuTypographiesData? typographies;
-  final MewnuRadiusData radius;
-  final MewnuSpacingsData spacings;
-  final MewnuShadowsData shadows;
-  final MewnuDurationsData? durations;
-  final MewnuImagesData images;
-  final MewnuSizesData sizes;
+  final IconsData icons;
+  final ColorsData? colors;
+  final ColorSchemeData? colorScheme;
+  final TypographiesData? typographies;
+  final RadiusData radius;
+  final SpacingsData spacings;
+  final ShadowsData shadows;
+  final DurationsData? durations;
+  final ImagesData images;
+  final SizesData sizes;
 
-  const MewnuThemeData.light({
+  const ThemeData.light({
     this.useMaterial3,
     required this.icons,
     this.colors,
@@ -28,7 +28,7 @@ class MewnuThemeData {
     required this.sizes,
   }) : brightness = material.Brightness.light;
 
-  const MewnuThemeData.dark({
+  const ThemeData.dark({
     this.useMaterial3,
     required this.icons,
     this.colors,
@@ -42,15 +42,15 @@ class MewnuThemeData {
     required this.sizes,
   }) : brightness = material.Brightness.dark;
 
-  factory MewnuThemeData.standard() => MewnuThemeData.light(
+  factory ThemeData.standard() => ThemeData.light(
         useMaterial3: true,
-        icons: MewnuIconsData.standard(),
-        colors: MewnuColorsData.standard(),
-        radius: const MewnuRadiusData.standard(),
-        spacings: MewnuSpacingsData.standard(),
-        shadows: MewnuShadowsData.standard(),
-        durations: MewnuDurationsData.standard(),
-        images: MewnuImagesData.standard(),
-        sizes: MewnuSizesData.standard(),
+        icons: IconsData.standard(),
+        colors: ColorsData.standard(),
+        radius: const RadiusData.standard(),
+        spacings: SpacingsData.standard(),
+        shadows: ShadowsData.standard(),
+        durations: DurationsData.standard(),
+        images: ImagesData.standard(),
+        sizes: SizesData.standard(),
       );
 }

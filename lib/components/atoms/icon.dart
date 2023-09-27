@@ -1,43 +1,43 @@
 part of mewnu;
 
-class MewnuIcon extends StatelessWidget {
+class Icon extends StatelessWidget {
   final String data;
   final Color? color;
-  final MewnuIconSize size;
+  final IconSize size;
 
-  const MewnuIcon.custom(
+  const Icon.custom(
     this.data, {
     super.key,
     this.color,
-    this.size = MewnuIconSize.medium,
+    this.size = IconSize.medium,
   });
 
-  const MewnuIcon.small(
+  const Icon.small(
     this.data, {
     super.key,
     this.color,
-  }) : size = MewnuIconSize.small;
+  }) : size = IconSize.small;
 
-  const MewnuIcon.medium(
+  const Icon.medium(
     this.data, {
     super.key,
     this.color,
-  }) : size = MewnuIconSize.medium;
+  }) : size = IconSize.medium;
 
-  const MewnuIcon.large(
+  const Icon.large(
     this.data, {
     super.key,
     this.color,
-  }) : size = MewnuIconSize.large;
+  }) : size = IconSize.large;
 
   @override
   Widget build(BuildContext context) {
     final theme = context.theme;
     final color = this.color ?? theme.colorScheme?.surface;
 
-    return Text(
+    return material.Text(
       data,
-      style: TextStyle(
+      style: material.TextStyle(
         fontFamily: theme.icons.fontFamily,
         package: theme.icons.fontPackage,
         color: color,
@@ -48,18 +48,18 @@ class MewnuIcon extends StatelessWidget {
   }
 }
 
-class MewnuAnimatedIcon extends StatelessWidget {
-  const MewnuAnimatedIcon(
+class AnimatedIcon extends StatelessWidget {
+  const AnimatedIcon(
     this.data, {
     super.key,
     this.color,
-    this.size = MewnuIconSize.small,
+    this.size = IconSize.small,
     this.duration = const Duration(milliseconds: 200),
   });
 
   final String data;
   final Color? color;
-  final MewnuIconSize size;
+  final IconSize size;
   final Duration duration;
 
   bool get isAnimated => duration.inMilliseconds > 0;
@@ -69,7 +69,7 @@ class MewnuAnimatedIcon extends StatelessWidget {
     final theme = context.theme;
     final color = this.color ?? theme.colorScheme?.surface;
     if (!isAnimated) {
-      return MewnuIcon.custom(
+      return Icon.custom(
         data,
         key: key,
         color: color,
@@ -92,21 +92,21 @@ class MewnuAnimatedIcon extends StatelessWidget {
   }
 }
 
-enum MewnuIconSize {
+enum IconSize {
   small,
   medium,
   large,
 }
 
-extension MewnuIconSizeExtension on MewnuIconSize {
-  double resolve(MewnuThemeData theme) {
+extension IconSizeExtension on IconSize {
+  double resolve(ThemeData theme) {
     final sizes = theme.icons.sizes;
     switch (this) {
-      case MewnuIconSize.small:
+      case IconSize.small:
         return sizes.small;
-      case MewnuIconSize.medium:
+      case IconSize.medium:
         return sizes.medium;
-      case MewnuIconSize.large:
+      case IconSize.large:
         return sizes.large;
     }
   }

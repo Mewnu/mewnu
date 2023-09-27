@@ -1,80 +1,78 @@
 part of mewnu;
 
-class MewnuPaddings {
-  MewnuPaddings();
+class Paddings {
+  Paddings();
 
-  MewnuPadding extraSmall({Widget? child}) =>
-      MewnuPadding.extraSmall(child: child);
+  Padding extraSmall({Widget? child}) => Padding.extraSmall(child: child);
 
-  MewnuPadding small({Widget? child}) => MewnuPadding.small(child: child);
+  Padding small({Widget? child}) => Padding.small(child: child);
 
-  MewnuPadding medium({Widget? child}) => MewnuPadding.medium(child: child);
+  Padding medium({Widget? child}) => Padding.medium(child: child);
 
-  MewnuPadding large({Widget? child}) => MewnuPadding.extraSmall(child: child);
+  Padding large({Widget? child}) => Padding.extraSmall(child: child);
 
-  MewnuPadding extraLarge({Widget? child}) =>
-      MewnuPadding.extraLarge(child: child);
+  Padding extraLarge({Widget? child}) => Padding.extraLarge(child: child);
 }
 
-class MewnuEdgeInsets {
-  final MewnuGapSize left;
-  final MewnuGapSize top;
-  final MewnuGapSize right;
-  final MewnuGapSize bottom;
+class EdgeInsets {
+  final GapSize left;
+  final GapSize top;
+  final GapSize right;
+  final GapSize bottom;
 
-  const MewnuEdgeInsets.all(MewnuGapSize value)
+  const EdgeInsets.all(GapSize value)
       : left = value,
         top = value,
         right = value,
         bottom = value;
 
-  const MewnuEdgeInsets.symmetric({
-    MewnuGapSize vertical = MewnuGapSize.none,
-    MewnuGapSize horizontal = MewnuGapSize.none,
+  const EdgeInsets.symmetric({
+    GapSize vertical = GapSize.none,
+    GapSize horizontal = GapSize.none,
   })  : left = horizontal,
         top = vertical,
         right = horizontal,
         bottom = vertical;
 
-  const MewnuEdgeInsets.only({
-    this.left = MewnuGapSize.none,
-    this.top = MewnuGapSize.none,
-    this.right = MewnuGapSize.none,
-    this.bottom = MewnuGapSize.none,
+  const EdgeInsets.only({
+    this.left = GapSize.none,
+    this.top = GapSize.none,
+    this.right = GapSize.none,
+    this.bottom = GapSize.none,
   });
 
-  const MewnuEdgeInsets.extraSmall()
-      : left = MewnuGapSize.extraSmall,
-        top = MewnuGapSize.extraSmall,
-        right = MewnuGapSize.extraSmall,
-        bottom = MewnuGapSize.extraSmall;
+  const EdgeInsets.extraSmall()
+      : left = GapSize.extraSmall,
+        top = GapSize.extraSmall,
+        right = GapSize.extraSmall,
+        bottom = GapSize.extraSmall;
 
-  const MewnuEdgeInsets.small()
-      : left = MewnuGapSize.small,
-        top = MewnuGapSize.small,
-        right = MewnuGapSize.small,
-        bottom = MewnuGapSize.small;
+  const EdgeInsets.small()
+      : left = GapSize.small,
+        top = GapSize.small,
+        right = GapSize.small,
+        bottom = GapSize.small;
 
-  const MewnuEdgeInsets.medium()
-      : left = MewnuGapSize.medium,
-        top = MewnuGapSize.medium,
-        right = MewnuGapSize.medium,
-        bottom = MewnuGapSize.medium;
+  const EdgeInsets.medium()
+      : left = GapSize.medium,
+        top = GapSize.medium,
+        right = GapSize.medium,
+        bottom = GapSize.medium;
 
-  const MewnuEdgeInsets.large()
-      : left = MewnuGapSize.large,
-        top = MewnuGapSize.large,
-        right = MewnuGapSize.large,
-        bottom = MewnuGapSize.large;
+  const EdgeInsets.large()
+      : left = GapSize.large,
+        top = GapSize.large,
+        right = GapSize.large,
+        bottom = GapSize.large;
 
-  const MewnuEdgeInsets.extraLarge()
-      : left = MewnuGapSize.extraLarge,
-        top = MewnuGapSize.extraLarge,
-        right = MewnuGapSize.extraLarge,
-        bottom = MewnuGapSize.extraLarge;
+  const EdgeInsets.extraLarge()
+      : left = GapSize.extraLarge,
+        top = GapSize.extraLarge,
+        right = GapSize.extraLarge,
+        bottom = GapSize.extraLarge;
 
-  EdgeInsets toEdgeInsets(MewnuThemeData theme) {
-    return EdgeInsets.only(
+  material.EdgeInsets toEdgeInsets(ThemeData theme) {
+    return material.EdgeInsets.only(
       left: left.size(theme),
       top: top.size(theme),
       right: right.size(theme),
@@ -83,50 +81,50 @@ class MewnuEdgeInsets {
   }
 }
 
-class MewnuPadding extends StatelessWidget {
-  final MewnuEdgeInsets padding;
+class Padding extends StatelessWidget {
+  final EdgeInsets padding;
   final Widget? child;
 
-  const MewnuPadding.none({
+  const Padding.none({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.none),
+  })  : padding = const EdgeInsets.all(GapSize.none),
         super(key: key);
 
-  const MewnuPadding.extraSmall({
+  const Padding.extraSmall({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.extraSmall),
+  })  : padding = const EdgeInsets.all(GapSize.extraSmall),
         super(key: key);
 
-  const MewnuPadding.small({
+  const Padding.small({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.small),
+  })  : padding = const EdgeInsets.all(GapSize.small),
         super(key: key);
 
-  const MewnuPadding.medium({
+  const Padding.medium({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.medium),
+  })  : padding = const EdgeInsets.all(GapSize.medium),
         super(key: key);
 
-  const MewnuPadding.large({
+  const Padding.large({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.large),
+  })  : padding = const EdgeInsets.all(GapSize.large),
         super(key: key);
 
-  const MewnuPadding.extraLarge({
+  const Padding.extraLarge({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.extraLarge),
+  })  : padding = const EdgeInsets.all(GapSize.extraLarge),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final theme = context.theme;
-    return Padding(
+    return material.Padding(
       padding: padding.toEdgeInsets(theme),
       child: child,
     );

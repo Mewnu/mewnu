@@ -1,15 +1,15 @@
 part of mewnu;
 
-class MewnuImagesData {
+class ImagesData {
   final PictureProvider lightLogo;
   final ImageProvider example;
 
-  const MewnuImagesData({
+  const ImagesData({
     required this.lightLogo,
     required this.example,
   });
 
-  factory MewnuImagesData.standard() => MewnuImagesData(
+  factory ImagesData.standard() => ImagesData(
         lightLogo: ExactAssetPicture(
           SvgPicture.svgStringDecoderBuilder,
           'assets/icons/logo.svg',

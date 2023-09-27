@@ -1,5 +1,5 @@
 import 'package:example/components/atoms/card.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mewnu/mewnu.dart';
 
 void main() {
@@ -11,20 +11,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MewnuBuilder.static(
-      title: 'Mewnu Example',
+    return MewnuApp.static(
+      title: ' Example',
       home: const HomePage(),
-      designSystem: MewnuDesignSystem(
-        lightTheme: MewnuThemeData.light(
-          colors: MewnuColorsData(
-            primarySwatch: MewnuColors.blue,
+      designSystem: DesignSystem(
+        lightTheme: ThemeData.light(
+          colors: ColorsData(
+            primarySwatch: Colors.blue,
           ),
-          icons: MewnuIconsData.standard(),
-          images: MewnuImagesData.standard(),
-          radius: const MewnuRadiusData.standard(),
-          shadows: MewnuShadowsData.standard(),
-          sizes: MewnuSizesData.standard(),
-          spacings: MewnuSpacingsData.standard(),
+          icons: IconsData.standard(),
+          images: ImagesData.standard(),
+          radius: const RadiusData.standard(),
+          shadows: ShadowsData.standard(),
+          sizes: SizesData.standard(),
+          spacings: SpacingsData.standard(),
         ),
       ),
     );

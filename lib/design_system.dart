@@ -1,18 +1,18 @@
 part of mewnu;
 
-class MewnuDesignSystem {
+class DesignSystem {
   final material.Brightness brightness;
-  final MewnuThemeData? lightTheme;
-  final MewnuThemeData? darkTheme;
-  final MewnuAtomicDesign components;
+  final ThemeData? lightTheme;
+  final ThemeData? darkTheme;
+  final AtomicDesign components;
 
-  MewnuDesignSystem({
+  DesignSystem({
     this.brightness = material.Brightness.light,
     this.lightTheme,
     this.darkTheme,
-  }) : components = MewnuAtomicDesign();
+  }) : components = AtomicDesign();
 
-  MewnuThemeData get theme =>
+  ThemeData get theme =>
       (brightness == material.Brightness.light ? lightTheme : darkTheme) ??
-      MewnuThemeData.standard();
+      ThemeData.standard();
 }

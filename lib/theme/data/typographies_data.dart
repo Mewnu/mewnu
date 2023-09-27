@@ -1,10 +1,10 @@
 part of mewnu;
 
-class MewnuTypographiesData extends material.TextTheme {
+class TypographiesData extends material.TextTheme {
   final String? fontFamily;
   final material.Typography? typography;
 
-  const MewnuTypographiesData({
+  const TypographiesData({
     this.fontFamily,
     this.typography,
     super.displayLarge,

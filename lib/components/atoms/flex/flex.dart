@@ -1,7 +1,7 @@
 part of mewnu;
 
-class MewnuFlexes {
-  MewnuFlexes();
+class Flexes {
+  Flexes();
 
   Column column({
     required List<Widget> children,

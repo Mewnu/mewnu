@@ -1,17 +1,17 @@
 part of mewnu;
 
-class MewnuDurationsData {
+class DurationsData {
   final bool areAnimationEnabled;
   final Duration regular;
   final Duration quick;
 
-  const MewnuDurationsData({
+  const DurationsData({
     required this.areAnimationEnabled,
     required this.regular,
     required this.quick,
   });
 
-  factory MewnuDurationsData.standard() => const MewnuDurationsData(
+  factory DurationsData.standard() => const DurationsData(
         areAnimationEnabled: true,
         regular: Duration(milliseconds: 250),
         quick: Duration(milliseconds: 100),

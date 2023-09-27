@@ -1,15 +1,15 @@
 part of mewnu;
 
-class MewnuShadowsData {
+class ShadowsData {
   final BoxShadow large;
 
-  const MewnuShadowsData({required this.large});
+  const ShadowsData({required this.large});
 
-  factory MewnuShadowsData.standard() => MewnuShadowsData(
+  factory ShadowsData.standard() => ShadowsData(
         large: BoxShadow(
           blurRadius: 8.0,
           spreadRadius: 2.0,
-          color: MewnuColors.white.withOpacity(.4),
+          color: Colors.white.withOpacity(.4),
         ),
       );
 }

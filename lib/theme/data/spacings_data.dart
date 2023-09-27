@@ -1,13 +1,13 @@
 part of mewnu;
 
-class MewnuSpacingsData {
+class SpacingsData {
   final double extraSmall;
   final double small;
   final double medium;
   final double large;
   final double extraLarge;
 
-  const MewnuSpacingsData({
+  const SpacingsData({
     required this.extraSmall,
     required this.small,
     required this.medium,
@@ -15,7 +15,7 @@ class MewnuSpacingsData {
     required this.extraLarge,
   });
 
-  factory MewnuSpacingsData.standard() => const MewnuSpacingsData(
+  factory SpacingsData.standard() => const SpacingsData(
         extraSmall: 4,
         small: 8,
         medium: 16,
@@ -23,17 +23,19 @@ class MewnuSpacingsData {
         extraLarge: 32,
       );
 
-  MewnuEdgeInsetsSpacingData asInsets() => MewnuEdgeInsetsSpacingData(this);
+  EdgeInsetsSpacingData asInsets() => EdgeInsetsSpacingData(this);
 }
 
-class MewnuEdgeInsetsSpacingData {
-  const MewnuEdgeInsetsSpacingData(this._spacing);
+class EdgeInsetsSpacingData {
+  const EdgeInsetsSpacingData(this._spacing);
 
-  EdgeInsets get extraSmall => EdgeInsets.all(_spacing.extraSmall);
-  EdgeInsets get small => EdgeInsets.all(_spacing.small);
-  EdgeInsets get medium => EdgeInsets.all(_spacing.medium);
-  EdgeInsets get large => EdgeInsets.all(_spacing.large);
-  EdgeInsets get extraLarge => EdgeInsets.all(_spacing.extraLarge);
+  material.EdgeInsets get extraSmall =>
+      material.EdgeInsets.all(_spacing.extraSmall);
+  material.EdgeInsets get small => material.EdgeInsets.all(_spacing.small);
+  material.EdgeInsets get medium => material.EdgeInsets.all(_spacing.medium);
+  material.EdgeInsets get large => material.EdgeInsets.all(_spacing.large);
+  material.EdgeInsets get extraLarge =>
+      material.EdgeInsets.all(_spacing.extraLarge);
 
-  final MewnuSpacingsData _spacing;
+  final SpacingsData _spacing;
 }

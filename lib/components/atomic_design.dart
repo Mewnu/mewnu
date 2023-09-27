@@ -1,14 +1,14 @@
 part of mewnu;
 
-class MewnuAtomicDesign {
-  final MewnuAtoms atoms;
-  final MewnuMolecules molecules;
-  final MewnuOrganisms organisms;
-  final MewnuTemplates templates;
+class AtomicDesign {
+  final Atoms atoms;
+  final Molecules molecules;
+  final Organisms organisms;
+  final Templates templates;
 
-  MewnuAtomicDesign()
-      : atoms = MewnuAtoms(),
-        molecules = MewnuMolecules(),
-        organisms = MewnuOrganisms(),
-        templates = MewnuTemplates();
+  AtomicDesign()
+      : atoms = Atoms(),
+        molecules = Molecules(),
+        organisms = Organisms(),
+        templates = Templates();
 }

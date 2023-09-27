@@ -2,8 +2,8 @@ library mewnu;
 
 import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart';
+import 'package:gap/gap.dart' as gap;
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
 
 part 'components/atomic_design.dart';
 part 'components/atoms/atoms.dart';
@@ -36,10 +36,10 @@ part 'theme/data/spacings_data.dart';
 part 'theme/data/typographies_data.dart';
 part 'theme/theme_data.dart';
 
-class MewnuBuilder extends InheritedWidget {
-  final MewnuDesignSystem designSystem;
+class MewnuApp extends InheritedWidget {
+  final DesignSystem designSystem;
 
-  MewnuBuilder.static({
+  MewnuApp.static({
     super.key,
     required String title,
     required Widget home,
@@ -70,7 +70,7 @@ class MewnuBuilder extends InheritedWidget {
           ),
         );
 
-  MewnuBuilder.router({
+  MewnuApp.router({
     super.key,
     required String title,
     required RouterConfig<Object> routerConfig,
@@ -101,78 +101,71 @@ class MewnuBuilder extends InheritedWidget {
           ),
         );
 
-  static MewnuBuilder of(BuildContext context) {
-    return (context.dependOnInheritedWidgetOfExactType<MewnuBuilder>()
-        as MewnuBuilder);
+  static MewnuApp of(BuildContext context) {
+    return (context.dependOnInheritedWidgetOfExactType<MewnuApp>() as MewnuApp);
   }
 
   @override
-  bool updateShouldNotify(MewnuBuilder oldWidget) {
+  bool updateShouldNotify(MewnuApp oldWidget) {
     return designSystem != oldWidget.designSystem;
   }
 }
 
 extension BuildContextExtension on BuildContext {
   /// Builder
-  MewnuBuilder get mewnu => MewnuBuilder.of(this);
-  MewnuDesignSystem get designSystem => MewnuBuilder.of(this).designSystem;
+  MewnuApp get mewnu => MewnuApp.of(this);
+  DesignSystem get designSystem => MewnuApp.of(this).designSystem;
 
   /// DesignSystem
-  MewnuThemeData get theme => MewnuBuilder.of(this).designSystem.theme;
-  MewnuAtomicDesign get components =>
-      MewnuBuilder.of(this).designSystem.components;
+  ThemeData get theme => MewnuApp.of(this).designSystem.theme;
+  AtomicDesign get components => MewnuApp.of(this).designSystem.components;
 
   /// ThemeData
-  MewnuIconsData get icons => MewnuBuilder.of(this).designSystem.theme.icons;
-  MewnuColorsData? get colors =>
-      MewnuBuilder.of(this).designSystem.theme.colors;
-  MewnuColorSchemeData? get colorScheme =>
-      MewnuBuilder.of(this).designSystem.theme.colorScheme;
-  MewnuTypographiesData? get typographies =>
-      MewnuBuilder.of(this).designSystem.theme.typographies;
-  MewnuRadiusData? get radius =>
-      MewnuBuilder.of(this).designSystem.theme.radius;
-  MewnuSpacingsData? get spacings =>
-      MewnuBuilder.of(this).designSystem.theme.spacings;
-  MewnuShadowsData? get shadows =>
-      MewnuBuilder.of(this).designSystem.theme.shadows;
-  MewnuDurationsData? get durations =>
-      MewnuBuilder.of(this).designSystem.theme.durations;
-  MewnuImagesData? get images =>
-      MewnuBuilder.of(this).designSystem.theme.images;
-  MewnuSizesData? get sizes => MewnuBuilder.of(this).designSystem.theme.sizes;
+  IconsData get icons => MewnuApp.of(this).designSystem.theme.icons;
+  ColorsData? get colors => MewnuApp.of(this).designSystem.theme.colors;
+  ColorSchemeData? get colorScheme =>
+      MewnuApp.of(this).designSystem.theme.colorScheme;
+  TypographiesData? get typographies =>
+      MewnuApp.of(this).designSystem.theme.typographies;
+  RadiusData? get radius => MewnuApp.of(this).designSystem.theme.radius;
+  SpacingsData? get spacings => MewnuApp.of(this).designSystem.theme.spacings;
+  ShadowsData? get shadows => MewnuApp.of(this).designSystem.theme.shadows;
+  DurationsData? get durations =>
+      MewnuApp.of(this).designSystem.theme.durations;
+  ImagesData? get images => MewnuApp.of(this).designSystem.theme.images;
+  SizesData? get sizes => MewnuApp.of(this).designSystem.theme.sizes;
 
   /// Components
-  MewnuAtoms get atoms => MewnuBuilder.of(this).designSystem.components.atoms;
+  Atoms get atoms => MewnuApp.of(this).designSystem.components.atoms;
   Container container() =>
-      MewnuBuilder.of(this).designSystem.components.atoms.container();
-  MewnuMolecules get molecules =>
-      MewnuBuilder.of(this).designSystem.components.molecules;
-  MewnuOrganisms get organisms =>
-      MewnuBuilder.of(this).designSystem.components.organisms;
-  MewnuTemplates get templates =>
-      MewnuBuilder.of(this).designSystem.components.templates;
+      MewnuApp.of(this).designSystem.components.atoms.container();
+  Molecules get molecules =>
+      MewnuApp.of(this).designSystem.components.molecules;
+  Organisms get organisms =>
+      MewnuApp.of(this).designSystem.components.organisms;
+  Templates get templates =>
+      MewnuApp.of(this).designSystem.components.templates;
 
   /// Atoms
-  MewnuGaps get gap => MewnuBuilder.of(this).designSystem.components.atoms.gap;
-  MewnuPaintings get painting =>
-      MewnuBuilder.of(this).designSystem.components.atoms.painting;
-  MewnuListViews get listView =>
-      MewnuBuilder.of(this).designSystem.components.atoms.listView;
+  Gaps get gap => MewnuApp.of(this).designSystem.components.atoms.gap;
+  Paintings get painting =>
+      MewnuApp.of(this).designSystem.components.atoms.painting;
+  ListViews get listView =>
+      MewnuApp.of(this).designSystem.components.atoms.listView;
 
   /// Paintings
-  MewnuDecorations get decoration =>
-      MewnuBuilder.of(this).designSystem.components.atoms.painting.decoration;
-  MewnuPaddings get padding =>
-      MewnuBuilder.of(this).designSystem.components.atoms.painting.padding;
+  Decorations get decoration =>
+      MewnuApp.of(this).designSystem.components.atoms.painting.decoration;
+  Paddings get padding =>
+      MewnuApp.of(this).designSystem.components.atoms.painting.padding;
 
   /// Molecules
-  MewnuButtons get button =>
-      MewnuBuilder.of(this).designSystem.components.molecules.button;
+  Buttons get button =>
+      MewnuApp.of(this).designSystem.components.molecules.button;
 
   /// Organisms
-  MewnuAppBars get appBar =>
-      MewnuBuilder.of(this).designSystem.components.organisms.appBar;
+  AppBars get appBar =>
+      MewnuApp.of(this).designSystem.components.organisms.appBar;
 
   /// Templates
 

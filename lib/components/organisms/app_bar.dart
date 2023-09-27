@@ -1,7 +1,7 @@
 part of mewnu;
 
-class MewnuAppBars {
-  MewnuAppBars();
+class AppBars {
+  AppBars();
 
   material.PreferredSizeWidget standard({
     Color? backgroundColor,

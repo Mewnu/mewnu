@@ -1,6 +1,6 @@
 part of mewnu;
 
-class MewnuMolecules {
-  MewnuMolecules() : button = MewnuButtons();
-  final MewnuButtons button;
+class Molecules {
+  Molecules() : button = Buttons();
+  final Buttons button;
 }

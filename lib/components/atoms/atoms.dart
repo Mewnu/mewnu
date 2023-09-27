@@ -1,18 +1,18 @@
 part of mewnu;
 
-class MewnuAtoms {
-  final MewnuPaintings painting;
-  final MewnuGaps gap;
-  final MewnuListViews listView;
-  final MewnuTexts text;
-  final MewnuFlexes flex;
+class Atoms {
+  final Paintings painting;
+  final Gaps gap;
+  final ListViews listView;
+  final Texts text;
+  final Flexes flex;
 
-  MewnuAtoms()
-      : painting = MewnuPaintings(),
-        gap = MewnuGaps(),
-        text = MewnuTexts(),
-        flex = MewnuFlexes(),
-        listView = MewnuListViews();
+  Atoms()
+      : painting = Paintings(),
+        gap = Gaps(),
+        text = Texts(),
+        flex = Flexes(),
+        listView = ListViews();
 
   Container container({
     BoxDecoration? decoration,

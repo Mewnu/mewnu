@@ -1,7 +1,7 @@
 part of mewnu;
 
-class MewnuButtons {
-  MewnuButtons();
+class Buttons {
+  Buttons();
 
   material.ElevatedButton elevated({
     required void Function()? onPressed,
