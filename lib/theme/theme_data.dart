@@ -3,29 +3,29 @@ part of mewnu;
 class ThemeData {
   final material.Brightness brightness;
   final bool? useMaterial3;
-  final IconsData icons;
+  final IconsData? icons;
   final ColorsData? colors;
   final ColorSchemeData? colorScheme;
   final TypographiesData? typographies;
-  final RadiusData radius;
-  final SpacingsData spacings;
-  final ShadowsData shadows;
+  final RadiusData? radius;
+  final SpacingsData? spacings;
+  final ShadowsData? shadows;
   final DurationsData? durations;
-  final ImagesData images;
-  final SizesData sizes;
+  final ImagesData? images;
+  final SizesData? sizes;
 
   const ThemeData.light({
     this.useMaterial3,
-    required this.icons,
+    this.icons,
     this.colors,
     this.colorScheme,
     this.typographies,
-    required this.radius,
-    required this.spacings,
-    required this.shadows,
+    this.radius,
+    this.spacings,
+    this.shadows,
     this.durations,
-    required this.images,
-    required this.sizes,
+    this.images,
+    this.sizes,
   }) : brightness = material.Brightness.light;
 
   const ThemeData.dark({

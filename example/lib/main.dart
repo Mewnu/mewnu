@@ -1,5 +1,6 @@
 import 'package:example/components/atoms/card.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart' as material;
 import 'package:mewnu/mewnu.dart';
 
 void main() {
@@ -15,16 +16,14 @@ class MyApp extends StatelessWidget {
       title: 'Mewnu Example',
       home: const HomePage(),
       designSystem: DesignSystem(
-        lightTheme: ThemeData.light(
+        lightTheme: const ThemeData.light(
           colors: ColorsData(
-            primarySwatch: Colors.blue,
+            scaffoldBackgroundColor: material.Colors.white,
+            primarySwatch: material.Colors.purple,
           ),
-          icons: IconsData.standard(),
-          images: ImagesData.standard(),
-          radius: const RadiusData.standard(),
-          shadows: ShadowsData.standard(),
-          sizes: SizesData.standard(),
-          spacings: SpacingsData.standard(),
+          typographies: TypographiesData(
+            fontFamily: 'Lato',
+          ),
         ),
       ),
     );

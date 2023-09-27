@@ -39,13 +39,14 @@ class ColorsData {
   final material.MaterialColor? primarySwatch;
   final material.Color? scaffoldBackgroundColor;
 
-  ColorsData({
+  const ColorsData({
     this.primarySwatch,
     this.scaffoldBackgroundColor,
   });
 
-  factory ColorsData.standard() => ColorsData(
+  factory ColorsData.standard() => const ColorsData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
       );
 }
 

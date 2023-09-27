@@ -129,7 +129,7 @@ extension BuildContextExtension on BuildContext {
   AtomicDesign get components => MewnuApp.of(this).designSystem.components;
 
   /// ThemeData
-  IconsData get icons => MewnuApp.of(this).designSystem.theme.icons;
+  IconsData? get icons => MewnuApp.of(this).designSystem.theme.icons;
   ColorsData? get colors => MewnuApp.of(this).designSystem.theme.colors;
   ColorSchemeData? get colorScheme =>
       MewnuApp.of(this).designSystem.theme.colorScheme;
