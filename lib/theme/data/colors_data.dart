@@ -37,8 +37,11 @@ class Colors {
 
 class ColorsData {
   final material.MaterialColor? primarySwatch;
+  final material.Color? scaffoldBackgroundColor;
+
   ColorsData({
     this.primarySwatch,
+    this.scaffoldBackgroundColor,
   });
 
   factory ColorsData.standard() => ColorsData(

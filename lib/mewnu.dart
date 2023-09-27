@@ -49,6 +49,8 @@ class MewnuApp extends InheritedWidget {
             title: title,
             debugShowCheckedModeBanner: false,
             theme: material.ThemeData(
+              scaffoldBackgroundColor:
+                  designSystem.lightTheme?.colors?.scaffoldBackgroundColor,
               typography: designSystem.lightTheme?.typographies?.typography,
               fontFamily: designSystem.lightTheme?.typographies?.fontFamily,
               useMaterial3: designSystem.lightTheme?.useMaterial3,
@@ -58,6 +60,8 @@ class MewnuApp extends InheritedWidget {
               textTheme: designSystem.lightTheme?.typographies,
             ),
             darkTheme: material.ThemeData(
+              scaffoldBackgroundColor:
+                  designSystem.darkTheme?.colors?.scaffoldBackgroundColor,
               typography: designSystem.darkTheme?.typographies?.typography,
               fontFamily: designSystem.darkTheme?.typographies?.fontFamily,
               useMaterial3: designSystem.darkTheme?.useMaterial3,
@@ -80,6 +84,8 @@ class MewnuApp extends InheritedWidget {
             title: title,
             debugShowCheckedModeBanner: false,
             theme: material.ThemeData(
+              scaffoldBackgroundColor:
+                  designSystem.lightTheme?.colors?.scaffoldBackgroundColor,
               typography: designSystem.lightTheme?.typographies?.typography,
               fontFamily: designSystem.lightTheme?.typographies?.fontFamily,
               useMaterial3: designSystem.lightTheme?.useMaterial3,
@@ -89,6 +95,8 @@ class MewnuApp extends InheritedWidget {
               textTheme: designSystem.lightTheme?.typographies,
             ),
             darkTheme: material.ThemeData(
+              scaffoldBackgroundColor:
+                  designSystem.darkTheme?.colors?.scaffoldBackgroundColor,
               typography: designSystem.darkTheme?.typographies?.typography,
               fontFamily: designSystem.darkTheme?.typographies?.fontFamily,
               useMaterial3: designSystem.darkTheme?.useMaterial3,

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MewnuApp.static(
-      title: ' Example',
+      title: 'Mewnu Example',
       home: const HomePage(),
       designSystem: DesignSystem(
         lightTheme: ThemeData.light(
