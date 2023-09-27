@@ -30,16 +30,16 @@ class ThemeData {
 
   const ThemeData.dark({
     this.useMaterial3,
-    required this.icons,
+    this.icons,
     this.colors,
     this.colorScheme,
     this.typographies,
-    required this.radius,
-    required this.spacings,
-    required this.shadows,
+    this.radius,
+    this.spacings,
+    this.shadows,
     this.durations,
-    required this.images,
-    required this.sizes,
+    this.images,
+    this.sizes,
   }) : brightness = material.Brightness.dark;
 
   factory ThemeData.standard() => ThemeData.light(

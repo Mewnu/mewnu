@@ -43,15 +43,15 @@ extension GapSizeExtension on GapSize {
       case GapSize.none:
         return 0;
       case GapSize.extraSmall:
-        return theme.spacings.extraSmall;
+        return theme.spacings?.extraSmall ?? 0;
       case GapSize.small:
-        return theme.spacings.small;
+        return theme.spacings?.small ?? 0;
       case GapSize.medium:
-        return theme.spacings.medium;
+        return theme.spacings?.medium ?? 0;
       case GapSize.large:
-        return theme.spacings.large;
+        return theme.spacings?.large ?? 0;
       case GapSize.extraLarge:
-        return theme.spacings.extraLarge;
+        return theme.spacings?.extraLarge ?? 0;
     }
   }
 }

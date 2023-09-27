@@ -38,8 +38,8 @@ class Icon extends StatelessWidget {
     return material.Text(
       data,
       style: material.TextStyle(
-        fontFamily: theme.icons.fontFamily,
-        package: theme.icons.fontPackage,
+        fontFamily: theme.icons?.fontFamily,
+        package: theme.icons?.fontPackage,
         color: color,
         fontSize: size.resolve(theme),
         decoration: TextDecoration.none,
@@ -78,8 +78,8 @@ class AnimatedIcon extends StatelessWidget {
     }
     return AnimatedDefaultTextStyle(
       style: TextStyle(
-        fontFamily: theme.icons.fontFamily,
-        package: theme.icons.fontPackage,
+        fontFamily: theme.icons?.fontFamily,
+        package: theme.icons?.fontPackage,
         color: color,
         fontSize: size.resolve(theme),
         decoration: TextDecoration.none,
@@ -100,14 +100,14 @@ enum IconSize {
 
 extension IconSizeExtension on IconSize {
   double resolve(ThemeData theme) {
-    final sizes = theme.icons.sizes;
+    final sizes = theme.icons?.sizes;
     switch (this) {
       case IconSize.small:
-        return sizes.small;
+        return sizes?.small ?? 0;
       case IconSize.medium:
-        return sizes.medium;
+        return sizes?.medium ?? 0;
       case IconSize.large:
-        return sizes.large;
+        return sizes?.large ?? 0;
     }
   }
 }
