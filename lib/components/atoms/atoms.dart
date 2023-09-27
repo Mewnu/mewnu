@@ -1,41 +1,67 @@
 part of mewnu;
 
 class MewnuAtoms {
-  final MewnuPaitings painting;
-  final MewnuButtons button;
+  final MewnuPaintings painting;
   final MewnuGaps gap;
   final MewnuListViews listView;
+  final MewnuTexts text;
+  final MewnuFlexes flex;
 
   MewnuAtoms()
-      : painting = MewnuPaitings(),
+      : painting = MewnuPaintings(),
         gap = MewnuGaps(),
-        listView = MewnuListViews(),
-        button = MewnuButtons();
+        text = MewnuTexts(),
+        flex = MewnuFlexes(),
+        listView = MewnuListViews();
 
-  MewnuContainer container({
+  Container container({
     BoxDecoration? decoration,
     Widget? child,
+    // super.key,
+    // this.alignment,
+    // this.padding,
+    // this.color,
+    // this.decoration,
+    // this.foregroundDecoration,
+    double? width,
+    double? height,
+    BoxConstraints? constraints,
+    // this.margin,
+    // this.transform,
+    // this.transformAlignment,
+    // this.child,
+    // this.clipBehavior = Clip.none,
   }) {
-    return MewnuContainer(
+    return Container(
       decoration: decoration,
+      height: height,
+      width: width,
       child: child,
     );
   }
 
-  Padding padding({
-    required EdgeInsets padding,
+  material.Card card({
+    Color? color,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    double? elevation,
+    ShapeBorder? shape,
+    bool borderOnForeground = true,
+    EdgeInsetsGeometry? margin,
+    Clip? clipBehavior,
+    bool semanticContainer = true,
     Widget? child,
   }) {
-    return Padding(
-      padding: padding,
-      child: child,
-    );
-  }
-
-  MewnuCard card({
-    Widget? child,
-  }) {
-    return MewnuCard(
+    return material.Card(
+      color: color,
+      shadowColor: shadowColor,
+      surfaceTintColor: surfaceTintColor,
+      elevation: elevation,
+      shape: shape,
+      borderOnForeground: borderOnForeground,
+      margin: margin,
+      clipBehavior: clipBehavior,
+      semanticContainer: semanticContainer,
       child: child,
     );
   }

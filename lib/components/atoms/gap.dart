@@ -99,7 +99,7 @@ class MewnuGap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Gap(
-      MewnuGapSize.extraLarge.size(context.theme),
+      gapSize.size(context.theme),
       color: color,
     );
   }

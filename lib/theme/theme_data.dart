@@ -10,7 +10,7 @@ class MewnuThemeData {
   final MewnuRadiusData radius;
   final MewnuSpacingsData spacings;
   final MewnuShadowsData shadows;
-  final MewnuDurationsData durations;
+  final MewnuDurationsData? durations;
   final MewnuImagesData images;
   final MewnuSizesData sizes;
 
@@ -23,7 +23,7 @@ class MewnuThemeData {
     required this.radius,
     required this.spacings,
     required this.shadows,
-    required this.durations,
+    this.durations,
     required this.images,
     required this.sizes,
   }) : brightness = material.Brightness.light;
@@ -37,7 +37,7 @@ class MewnuThemeData {
     required this.radius,
     required this.spacings,
     required this.shadows,
-    required this.durations,
+    this.durations,
     required this.images,
     required this.sizes,
   }) : brightness = material.Brightness.dark;

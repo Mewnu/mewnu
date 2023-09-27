@@ -3,22 +3,15 @@ part of mewnu;
 class MewnuTemplates {
   MewnuTemplates();
 
-  MewnuScaffold scaffold({
+  material.Scaffold scaffold({
     PreferredSizeWidget? appBar,
     Widget? body,
+    Widget? bottomNavigationBar,
   }) {
-    return MewnuScaffold(
+    return material.Scaffold(
       appBar: appBar,
       body: body,
+      bottomNavigationBar: bottomNavigationBar,
     );
   }
-}
-
-class MewnuScaffold extends material.Scaffold {
-  const MewnuScaffold({
-    super.key,
-    super.appBar,
-    super.body,
-    super.bottomNavigationBar,
-  });
 }

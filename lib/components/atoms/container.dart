@@ -1,9 +1,3 @@
-import 'package:flutter/widgets.dart';
+part of mewnu;
 
-class MewnuContainer extends Container {
-  MewnuContainer({
-    super.key,
-    super.decoration,
-    super.child,
-  });
-}
+extension ContainerExtension on material.Container {}

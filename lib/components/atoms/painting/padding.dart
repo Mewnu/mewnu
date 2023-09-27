@@ -1,5 +1,21 @@
 part of mewnu;
 
+class MewnuPaddings {
+  MewnuPaddings();
+
+  MewnuPadding extraSmall({Widget? child}) =>
+      MewnuPadding.extraSmall(child: child);
+
+  MewnuPadding small({Widget? child}) => MewnuPadding.small(child: child);
+
+  MewnuPadding medium({Widget? child}) => MewnuPadding.medium(child: child);
+
+  MewnuPadding large({Widget? child}) => MewnuPadding.extraSmall(child: child);
+
+  MewnuPadding extraLarge({Widget? child}) =>
+      MewnuPadding.extraLarge(child: child);
+}
+
 class MewnuEdgeInsets {
   final MewnuGapSize left;
   final MewnuGapSize top;
@@ -68,16 +84,19 @@ class MewnuEdgeInsets {
 }
 
 class MewnuPadding extends StatelessWidget {
-  const MewnuPadding({
+  final MewnuEdgeInsets padding;
+  final Widget? child;
+
+  const MewnuPadding.none({
     Key? key,
-    this.padding = const MewnuEdgeInsets.all(MewnuGapSize.none),
     this.child,
-  }) : super(key: key);
+  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.none),
+        super(key: key);
 
   const MewnuPadding.extraSmall({
     Key? key,
     this.child,
-  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.none),
+  })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.extraSmall),
         super(key: key);
 
   const MewnuPadding.small({
@@ -103,9 +122,6 @@ class MewnuPadding extends StatelessWidget {
     this.child,
   })  : padding = const MewnuEdgeInsets.all(MewnuGapSize.extraLarge),
         super(key: key);
-
-  final MewnuEdgeInsets padding;
-  final Widget? child;
 
   @override
   Widget build(BuildContext context) {

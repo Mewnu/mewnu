@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+import 'package:example/components/atoms/card.dart';
+import 'package:flutter/material.dart';
 import 'package:mewnu/mewnu.dart';
 
 void main() {
@@ -18,7 +19,6 @@ class MyApp extends StatelessWidget {
           colors: MewnuColorsData(
             primarySwatch: MewnuColors.blue,
           ),
-          durations: MewnuDurationsData.standard(),
           icons: MewnuIconsData.standard(),
           images: MewnuImagesData.standard(),
           radius: const MewnuRadiusData.standard(),
@@ -39,20 +39,39 @@ class HomePage extends StatelessWidget {
     final c = context;
 
     return c.templates.scaffold(
-      appBar: c.organisms.appBar(),
+      appBar: c.appBar.standard(),
       body: c.atoms.container(
-        decoration: c.paintings.boxDecoration(
+        decoration: c.decoration.boxDecoration(
           color: c.colorScheme?.background,
         ),
-        child: c.atoms.listView.static(
+        child: c.listView.static(
           children: [
-            c.atoms.padding(
-              padding: c.paintings.edgeInsetsAll(8),
+            c.padding.medium(
               child: c.atoms.container(
-                decoration: c.paintings.boxDecoration(
+                decoration: c.decoration.boxDecoration(
                   color: c.colorScheme?.surface,
                 ),
-                child: c.atoms.container(),
+                child: c.atoms.container(
+                  child: c.atoms
+                      .card(
+                        child: c.atoms.container(
+                          height: 200,
+                          decoration: c.painting.decoration.boxDecoration(
+                            color: c.theme.colors?.primarySwatch,
+                          ),
+                          child: c.atoms.flex.column(
+                            children: [
+                              c.atoms.gap.large(),
+                              c.atoms.painting.padding.extraLarge(
+                                child: c.atoms.text.bodyLarge('EXAMPLE'),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                      .elevated(elevation: 100)
+                      .outlined(),
+                ),
               ),
             ),
           ],
